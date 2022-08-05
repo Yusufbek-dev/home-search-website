@@ -1,0 +1,114 @@
+@use "../globals/mixin" as *;
+@use "../globals/colors" as *;
+.intro {
+  padding-bottom: 70px;
+  background: url(/images/intro-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  &__title {
+    width: 50%;
+    font-size: 3rem;
+    line-height: 75px;
+    text-transform: uppercase;
+  }
+  &__subtitle {
+    margin: 47px 0;
+    width: 40%;
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 36px;
+    color: $text-color;
+  }
+  &__status-list {
+    margin-bottom: 57px;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    &_item {
+      display: flex;
+      align-items: flex-end;
+      column-gap: 20px;
+      span {
+        font-size: 5rem;
+        color: $text-color;
+      }
+      small {
+        font-weight: 400;
+        font-size: .9rem;
+        line-height: 26px;
+      }
+    }
+  }
+  &__min-subtitle {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    font-size: 16px;
+    line-height: 26px;
+    color: $text-color;
+    &::before {
+      display: inline-block;
+      content: "";
+      vertical-align: text-top;
+      width: 98px;
+      height: 73px;
+      margin-right: px;
+      background: url(/images/icons/wine-icon.svg) no-repeat left center;
+    }
+  }
+  &__btn {
+    margin-top: 50px;
+    @include btn($primary-color,#fff)
+  }
+  @media (max-width:1004px) {
+    &__title {
+      text-align: center;
+      width: 90%;
+      margin: 0 auto;
+      font-size: 2.7rem;
+      line-height: 50px;
+    }
+    &__subtitle {
+      text-align: center;
+      margin: 37px auto;
+      width: 70%;
+      font-size: 1rem;
+    }
+    &__status-list {
+      margin-left: 50%;
+      transform: translateX(-50%);
+      margin-bottom: 47px;
+      width: 80%;
+      flex-wrap: wrap;
+      gap: 10px;
+      &_item {
+        align-items: center;
+      }
+    }
+    &__min-subtitle {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      width: 75%;
+    }
+    
+  }
+  @media (max-width:500px) {
+    .intro {
+      &__title {
+        width: 90%;
+        font-size: 1.8rem;
+      }
+      &__min-subtitle {
+        flex-direction: column;
+      }
+      &__btn {
+        width: 60%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}

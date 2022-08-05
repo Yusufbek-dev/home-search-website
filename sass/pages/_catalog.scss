@@ -1,0 +1,131 @@
+@use "../globals/colors" as *;
+.catalog {
+  padding-top: 10px;
+  padding-bottom: 60px;
+  &__title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  &__subtitle {
+    font-size: 1rem;
+    text-align: center;
+    margin: 15px;
+  }
+  .catalog-nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    &__item {
+      transition: 0.3s;
+      padding: 19px 61px;
+      width: 19.9%;
+      background-color: #fff;
+      &:hover {
+        background-color: #f6f6f6;
+      }
+    }
+    &__item--active {
+      background-color: $primary-color;
+    }
+  }
+  .catalog-list {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+    &__btn {
+      width: 100%;
+      padding: 17px 10px;
+      margin-top: 25px;
+      background: #f6f6f6;
+      border: 2px solid #f6f6f6;
+      transition: .3s;
+      &:hover {
+        cursor: pointer;
+        background-color:$primary-color;
+        color:#fff;
+      }
+    }
+    &__item {
+      background: #ffffff;
+      border: 1px solid #f6f6f6;
+      width: 48%;
+      .cat-min-text {
+        padding-left: 30px;
+        margin-bottom: 25px;
+        color: #000;
+      }
+      img {
+        min-width: 100%;
+        height: auto;
+      }
+      &_title {
+        padding-left: 30px;
+        margin-top: 30px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        &:hover {
+          cursor: pointer;
+          color: $primary-color;
+        }
+      }
+
+      &_sub-box {
+        padding: 30px 30px 15px 30px;
+        .sub-box-top {
+          display: flex;
+          justify-content: space-between;
+          p {
+            font-size: 1.7rem;
+          }
+          small {
+            font-size: 1rem;
+          }
+        }
+        .sub-box-bottom {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+  .more-btn {
+    margin-top: 40px;
+    border: none;
+    width: 100%;
+    text-align: center;
+    padding: 19px 20px;
+    background: #f6f6f6cc;
+    transition: .3s;
+    &:hover {
+      background-color: $primary-color;
+      cursor: pointer;
+      color: #fff;
+    }
+    img {
+      margin-left: 15px;
+    }
+  }
+  @media (max-width:1024px) {
+    .catalog-nav {
+      justify-content: center;
+      &__item {
+        width: 45%;
+      }
+    }
+    .catalog-list {
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      &__item {
+        width: 90%;
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

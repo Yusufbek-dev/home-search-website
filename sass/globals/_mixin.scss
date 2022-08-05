@@ -1,0 +1,26 @@
+@use "../globals/colors" as *;
+@mixin theme-color ($btn-bg:true) {
+  @if s {
+    background-color:transparent;
+    color: $text-color;
+  } @else {
+    background-color:$primary-color;
+    color:$text-color;
+  }
+}
+@mixin btn ($bg-color, $tx-color) {
+    padding: 17px 30px;
+    background-color:$bg-color;
+    color: $tx-color;
+    border: 2px solid $primary-color;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    transition: all .3s ease-in;
+    &:hover {
+      @include theme-color($btn-bg:$bg-color)
+    }
+  
+}

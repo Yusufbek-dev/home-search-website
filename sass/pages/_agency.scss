@@ -1,0 +1,66 @@
+@use "../globals/mixin" as *;
+@use "../globals/colors" as *;
+.agency {
+  padding: 60px 0;
+  .agency-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    .agency__defn {
+      &_title {
+        width: 40%;
+        font-size: 1.8rem;
+        line-height: 34px;
+        margin-bottom: 20px;
+      }
+      h3 {
+        font-size: 1.4rem;
+        margin-bottom: 30px;
+      }
+      p {
+        width: 80%;
+        font-size: 0.9rem;
+        line-height: 33px;
+      }
+      button {
+        margin-top: 20px;
+        @include btn($primary-color, 1)
+      }
+    }
+  }
+  @media (max-width:1024px) {
+    &__img {
+      display: none;
+    }
+    __denf {
+      width: 90%;
+    }
+  }
+
+  @media (max-width:500px) {
+    .agency-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .agency__defn {
+        width: 90%;
+        &_title {
+          width: 90%;
+        }
+        h3 {
+          margin-bottom: 20px;
+        }
+        p {
+          width: 90%;
+        }
+        button {
+          margin-left: 50%;
+          transform: translateX(-50%);
+          margin-top: 20px;
+          @include btn($primary-color, 1)
+        }}
+
+    }
+  }
+  
+}

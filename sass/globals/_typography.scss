@@ -1,0 +1,13 @@
+@use "colors" as *;
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  font-weight: 700;
+  color: $text-color;
+}
+p {
+  margin-top: 0;
+  font-weight: 400;
+  color:rgba($text-color, 0.7)
+}

@@ -1,0 +1,71 @@
+@use "../globals/colors" as *;
+
+.head {
+  padding: 32px 0;
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 8%;
+  }
+  &__menu {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    &_icon {
+      cursor: pointer;
+    }
+    &_text {
+      color: $text-color;
+    }
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    &_img {
+      margin-right: 30px;
+    }
+    &_text {
+      font-size: 0.8rem;
+      width: 50%;
+      line-height: 26px;
+      color: $text-color;
+    }
+  }
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    &_number {
+      margin-bottom: 20px;
+      font-size: 30px;
+      line-height: 49px;
+      color: $text-color;
+    }
+    &_btn {
+      border: 1px solid #2a94e2;
+      background-color: transparent;
+      border-radius: 5px;
+      padding: 17px 70px;
+      cursor: pointer;
+    }
+  }
+  @media (max-width: 1024px) {
+    &__list {
+      padding-right: 0%;
+      flex-direction: row-reverse;
+    }
+    &__menu {
+      &_text {
+        display: none;
+      }
+    }
+    &__logo {
+      &_text {
+        display: none;
+      }
+    }
+    &__contact {
+      display: none;
+    }
+  }
+  
+}
