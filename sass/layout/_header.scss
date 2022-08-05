@@ -1,5 +1,36 @@
 @use "../globals/colors" as *;
 
+#check-menu {
+  display: none;
+}
+.menu-list {
+  z-index: 100;
+  background-color:rgba(#000,.9);
+  padding: 20px;
+  transform: translateY(-100%);
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 50%;
+  height:100vh;
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  transition: .3s;
+  &__item {
+    color:#fff;
+    font-size: 1.7rem;
+    &:hover {
+      color:#2a94e2;
+    }
+  }
+}
+#check-menu:checked + .menu-list{
+  transform: translateY(0);
+}
 .head {
   padding: 32px 0;
   &__list {
